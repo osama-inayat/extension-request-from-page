@@ -6,11 +6,27 @@
   "background": {
     "service_worker": "background.js"
   },
+  "web_accessible_resources": [
+   {
+      "resources":["src/content.js"],
+      "matches": ["https://app.hubspot.com/*"]
+   }
+  ],
   "permissions": [
     "tabs",
-    "storage"
+    "storage",
+    "activeTab"
   ],
+  "host_permissions": [
+    "https://app.hubspot.com/*"
+  ], 
   "action": {
     "default_popup": "popup.html"
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://app.hubspot.com/*"],
+      "js": ["src/injectscript.js"]
+    }
+  ]
 }
