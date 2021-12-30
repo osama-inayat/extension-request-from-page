@@ -1,0 +1,6 @@
+{
+  "name": "Hubspot Testing",
+  "description": "Testing whether we can still call api from hubspot",
+  "version": "0.0.1",
+  "manifest_version": 3
+}
